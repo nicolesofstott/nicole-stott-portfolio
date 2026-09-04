@@ -1,0 +1,57 @@
+.hero {
+  padding: clamp(2rem, 6vw, 5rem) var(--gutter) clamp(3rem, 7vw, 5rem);
+  text-align: center;
+}
+
+/* The name is drawn as SVG text with textLength so it spans the full viewport
+   width exactly, at any screen size and regardless of which font actually loads. */
+.hero-name {
+  margin-left: calc(var(--gutter) * -1);
+  margin-right: calc(var(--gutter) * -1);
+}
+
+/* viewBox height 110 / baseline 107 matches Bodoni Moda's ink box at this size
+   (cap height 0.76em, 0.015em of overshoot below the baseline). overflow stays
+   visible so a fallback serif with taller caps spills rather than being clipped. */
+.hero-name svg { display: block; width: 100%; height: auto; overflow: visible; }
+
+.hero-name text {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 140px;
+  fill: var(--ink);
+}
+
+.hero-tagline {
+  font-weight: 700;
+  font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+  line-height: 1.55;
+  margin: clamp(3rem, 7vw, 5.5rem) auto 0;
+  max-width: 30ch;
+}
+
+.hero-tagline span { display: block; }
+
+.hero-intro { max-width: 58ch; margin: 2.75rem auto 0; }
+.hero-intro + .hero-intro { margin-top: 1.4rem; }
+
+.hero-location { margin-top: 2.25rem; }
+
+.hero-cta {
+  display: inline-block;
+  margin-top: 2.75rem;
+  padding: 0.7rem 2.4rem;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+.hero-cta:hover { background: var(--ink); color: var(--paper); }
+
+.home-image {
+  padding: 0 var(--gutter) clamp(3rem, 7vw, 5rem);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.home-image img { transform: rotate(180deg); }

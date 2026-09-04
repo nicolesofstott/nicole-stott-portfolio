@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Nicole Stott</title>
+    <script>
+      // Save the requested path, then send the browser to the SPA root.
+      sessionStorage.setItem(
+        'spa-redirect',
+        location.pathname + location.search + location.hash
+      );
+      location.replace(
+        location.origin + (location.pathname.split('/')[1] === '' ? '/' : '/')
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

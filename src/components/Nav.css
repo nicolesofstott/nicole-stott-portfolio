@@ -1,0 +1,10 @@
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  padding: 1.4rem var(--gutter);
+}
+
+.nav a { text-decoration: none; font-size: 1rem; }
+.nav a.active { text-decoration: underline; text-underline-offset: 6px; }

@@ -1,0 +1,70 @@
+/* Global design tokens and base styles.
+   Page- and component-specific styles live next to their .jsx files. */
+
+:root {
+  --paper: #ffffff;
+  --ink: #1d1d1b;
+  --ink-soft: #4a4a47;
+  --line: #e8e8e5;
+
+  --font-display: 'Bodoni Moda', 'Didot', Georgia, serif;
+  --font-body: 'Wix Madefor Text', -apple-system, 'Segoe UI', sans-serif;
+
+  --measure: 72ch;
+  --gutter: clamp(1.25rem, 5vw, 4rem);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: var(--ink); text-decoration-thickness: 1px; text-underline-offset: 4px; }
+a:hover { color: #000; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.12;
+  margin: 0;
+}
+
+/* Shared page shell used by About and Projects */
+.page {
+  padding: clamp(2.5rem, 6vw, 4.5rem) var(--gutter);
+  max-width: 1240px;
+  margin: 0 auto;
+}
+.page-centered { text-align: center; }
+.page-title { font-size: clamp(2.4rem, 6vw, 4.2rem); }
+.page-lede { color: var(--ink-soft); margin-top: 1rem; }
