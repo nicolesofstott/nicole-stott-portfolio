@@ -183,8 +183,7 @@ export const site = {
   phone: '+44 7826 477534',
   phoneDisplay: '07826 477534',
   linkedin: 'https://www.linkedin.com/in/nicolestottloz',
-  homeImage:
-    'https://static.wixstatic.com/media/5507bb_b9ca8bceb49b4bad9faf752efaaebd02~mv2.jpeg/v1/crop/x_0,y_28,w_1664,h_1014/fill/w_980,h_597,al_c,q_85/Document_2026-09-02_165344.jpeg',
+  homeImage: '/images/firefly-increase-contrast.png',
   poppyTop:
     'https://static.wixstatic.com/media/5507bb_c7133cd55ecf4315b80f897955408344~mv2.png/v1/fill/w_1960,h_654,al_c,q_85/Pink%20Poppy%20Flowers.png',
   poppyBottom:

@@ -54,4 +54,10 @@
   margin: 0 auto;
 }
 
-.home-image img { transform: rotate(180deg); }
+.home-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  filter: contrast(1.2) saturate(1.05) brightness(1.03);
+}
